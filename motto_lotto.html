@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Motto Lotto</title>
-<script type='text/javascript'>
-var quoteIndex = 0;
+    <script>
+  var quoteIndex = 0;
   var quotes = [
       "Don't ruin the present with the past or the future.",
       "Belief? Disbelief? A Jedi cares not for such things.",
@@ -46,12 +46,11 @@ function displayRandomQuote(){
     document.querySelector("#motto").innerHTML = quotes[quoteIndex];
     quoteIndex++;
 }
-
-</script>
-</head>
-<body>
+    </script>
+  </head>
+  <body>
     <div style="height: 50px;" id="motto">This is where the motto will display.</div>
     <script>displayRandomQuote();</script>
     <a href="javascript:displayRandomQuote();">pick random</a> <a href="javascript:nextQuote();">next quote</a>
-</body>
+  </body>
 </html>
