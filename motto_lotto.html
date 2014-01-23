@@ -1,7 +1,6 @@
 <html>
   <head>
     <title>Motto Lotto</title>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script type='text/javascript'>
 var quoteIndex = 0;
   var quotes = [
@@ -34,7 +33,7 @@ var quoteIndex = 0;
       'Facts, no matter how convincing, rarely trump a good solid dose of repetition.'];
 
 function nextQuote(){
-    $(".description").html(quotes[quoteIndex]);
+    document.querySelector(".description").innerHTML = quotes[quoteIndex];
     quoteIndex++;
     if(quoteIndex >= quotes.length){
         quoteIndex = 0;
@@ -42,7 +41,7 @@ function nextQuote(){
 }
 function displayRandomQuote(){
     quoteIndex = Math.floor(Math.random()*quotes.length);
-    $(".description").html(quotes[quoteIndex]);
+    document.querySelector(".description").innerHTML = quotes[quoteIndex];
     quoteIndex++;
 }
 
