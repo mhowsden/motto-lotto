@@ -33,7 +33,7 @@ var quoteIndex = 0;
       'Facts, no matter how convincing, rarely trump a good solid dose of repetition.'];
 
 function nextQuote(){
-    document.querySelector(".description").innerHTML = quotes[quoteIndex];
+    document.querySelector("#motto").innerHTML = quotes[quoteIndex];
     quoteIndex++;
     if(quoteIndex >= quotes.length){
         quoteIndex = 0;
@@ -41,14 +41,14 @@ function nextQuote(){
 }
 function displayRandomQuote(){
     quoteIndex = Math.floor(Math.random()*quotes.length);
-    document.querySelector(".description").innerHTML = quotes[quoteIndex];
+    document.querySelector("#motto").innerHTML = quotes[quoteIndex];
     quoteIndex++;
 }
 
 </script>
 </head>
 <body>
-    <div style="height: 50px;" class="description">This is where the motto will display.</div>
+    <div style="height: 50px;" id="motto">This is where the motto will display.</div>
     <script>displayRandomQuote();</script>
     <a href="javascript:displayRandomQuote();">pick random</a> <a href="javascript:nextQuote();">next quote</a>
 </body>
